@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>MONPLE - MEMORY GAME</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="aimee/css/index5.css" /> <!-- memory game css -->
+
+    <!-- nav -->
+    <link type="text/css" rel="stylesheet" href="css/nav.css">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <!-- page1 -->
+        <!-- nav -->
+                    <nav class="nav is-fixed" role="navigation">
+                            <button class="nav-toggle">
+                            <div class="icon-menu">  <!--nav icon -->
+                                <span class="line line-1"></span>
+                                <span class="line line-2"></span>
+                                <span class="line line-3"></span>
+                            </div>
+                            </button>
+                            <div class="nav-container">
+                              <ul class="nav-menu menu">
+                                <li class="menu-item"> <a href="index3.html" class="menu-link"><i class="fa fa-cutlery fa-1x"></i> Feeding</a> </li>
+                                <li class="menu-item"> <a href="index5.html" class="menu-link"><i class="fa fa-camera-retro fa-1x"></i> Memory</a> </li>
+                                <li class="menu-item"> <a href="index7.html" class="menu-link"><i class="fa fa-clock-o fa-1x" ></i> WorkOut</a> </li>
+                               <!-- sign out button -->
+            <input type="submit" id="signout" class="btn btn-primary" value="Sign Out" onclick="handleSignOut();">
+                            </ul>
+                           </div>
+                          </nav>
+                    <!--nav end  -->
+
+        <div class="item item-0" id="page1">
+            <div class="content">
+                <div class="m_animate_box">
+                    <div class="inner">
+                            
+                         <!-- gmae -->
+                         <div id="gameBoard">
+                                <span id="gameButtons">
+                                    <span class="button" >
+                                        <a onclick="startAgain();">Start again</a>
+                                    </span>
+
+                                    <span class="button" >
+                                        <span id="counter">0</span> Moves
+                                    </span>
+                                    
+                                </span>
+                                <br><br><br><br>
+                                <div id="boxes"> </div>
+                            </div>
+                            
+                            <!--end  -->
+                            </div>
+                            <br>
+                            <!-- <hr style="background: #bebebe; margin: 16px 0;"> -->
+                            <!-- <div style="text-align: center;">
+                                <a href="#" data-corners="false" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev Page</a>
+                                
+                            </div>   -->
+                            <!-- game end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="aimee/js/prefixfree.min.js"></script> <!-- memory game js -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><!-- memory game js -->
+    <script src="aimee/js/game.js"></script><!-- memory game js -->
+    <!-- login -->
+    <!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCi-7nuFqKhdtPJIsc_NaoAuQUW9LMd5V0",
+    authDomain: "class-27705.firebaseapp.com",
+    databaseURL: "https://class-27705.firebaseio.com",
+    projectId: "class-27705",
+    storageBucket: "class-27705.appspot.com",
+    messagingSenderId: "839264844115"
+  };
+  firebase.initializeApp(config);
+</script>
+    <!-- nav -->
+<script src="js/nav.js"></script>
+<script src="myauth.js"></script>
+</body>
+
+</html>

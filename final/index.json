@@ -1,0 +1,9 @@
+{
+    "monsters": [
+        { "name":"A" , "image":"img/monster1.png" }, 
+        { "name":"B" , "image":"img/monster2.png" }, 
+        { "name":"C" , "image":"img/monster3.png" }
+        ]
+
+    
+}

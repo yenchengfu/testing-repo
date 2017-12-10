@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="stopwatch-mode">
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>MONPLE - WORK OUT</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110738954-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110738954-1');
+</script>
+
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+	<link type="text/css" rel="stylesheet" href="jquery-timepicker/jquery.timepicker.css">
+	
+	<!-- nav -->
+	<link type="text/css" rel="stylesheet" href="css/nav.css">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="wrapper">
+	 <!-- nav -->
+                    <nav class="nav is-fixed" role="navigation">
+                            <button class="nav-toggle">
+                            <div class="icon-menu">  <!--nav icon -->
+                                <span class="line line-1"></span>
+                                <span class="line line-2"></span>
+                                <span class="line line-3"></span>
+                            </div>
+                            </button>
+                            <div class="nav-container">
+                              <ul class="nav-menu menu">
+                                <li class="menu-item"> <a href="index3.html" class="menu-link"><i class="fa fa-cutlery fa-1x"></i> Feeding</a> </li>
+                                <li class="menu-item"> <a href="index5.html" class="menu-link"><i class="fa fa-camera-retro fa-1x"></i> Memory</a> </li>
+                                <li class="menu-item"> <a href="index7.html" class="menu-link"><i class="fa fa-clock-o fa-1x" ></i> WorkOut</a> </li>
+                               <!-- sign out button -->
+            <input type="submit" id="signout" class="btn btn-primary" value="Sign Out" onclick="handleSignOut();">
+                            </ul>
+                           </div>
+                          </nav>
+                    <!--nav end  -->
+	<dir class="picks"><h5>Workout</h5></dir>
+
+	<div class="app">
+		<img src="img/run3.gif">
+
+		<div class="container timer hidden">
+
+			<form>
+				<div class="control input-field">
+					<input id="timer-input" type="number">
+					<label for="timer-input">Minutes</label>
+				</div>
+
+				<a class="timer-btn start waves-effect"><i class="mdi-av-play-arrow"></i></a>
+				<a class="timer-btn pause waves-effect"><i class="mdi-av-pause"></i></a>
+				<a class="timer-btn reset waves-effect"><i class="mdi-av-replay"></i></a>
+
+				<div class="control checkbox">
+					<input type="checkbox" id="timer-sounds" />
+					<label for="timer-sounds">Sounds</label>
+				</div>
+
+			</form>
+
+			<div class="clock inactive z-depth-1 waves-effect">0:00</div>
+		</div>
+
+
+	</div>
+
+	<div id="times-up-modal" class="modal">
+		<div class="modal-content">
+			<h3>Time's Up!</h3>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="dismiss-alarm-sounds modal-action waves-effect waves-red btn-flat">Dismiss Alarm</a>
+		</div>
+	</div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script src="jquery-timepicker/jquery.timepicker.min.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/script.js"></script>
+<script src="js/alarm.js"></script>
+<script src="js/stopwatch.js"></script>
+<script src="js/timer.js"></script>
+<!-- login -->
+    <!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCi-7nuFqKhdtPJIsc_NaoAuQUW9LMd5V0",
+    authDomain: "class-27705.firebaseapp.com",
+    databaseURL: "https://class-27705.firebaseio.com",
+    projectId: "class-27705",
+    storageBucket: "class-27705.appspot.com",
+    messagingSenderId: "839264844115"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- nav -->
+<script src="js/nav.js"></script>
+<script src="myauth.js"></script>
+
+</body>
+</html>

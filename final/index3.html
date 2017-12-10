@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>Monster</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110738954-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110738954-1');
+  
+</script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/styleindex3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+<!-- 12/5禮拜二新增 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/index3.js"></script>
+
+    <script>
+
+            $(document).ready(function(){
+                
+                    $.getJSON("index.json", function(result){
+                            console.log(result);
+                            console.log(result.monsters);
+                            $("#momo").append('<img src="' +result.monsters[localStorage.getItem("myMonster")].image+ '">' );
+
+                        // $.each(result.monsters, function(i, field){
+                        //     $("#momo").append('<img src="' +field.image+ '">' );
+                        //     console.log( field);
+                        // });
+                    });
+            });
+
+    </script>
+<!-- 12/5禮拜二新增 -->
+
+
+<!-- nav -->
+<link type="text/css" rel="stylesheet" href="css/nav.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- page1 -->
+        <!-- nav -->
+        <nav class="nav is-fixed" role="navigation">
+            <button class="nav-toggle">
+            <div class="icon-menu">  <!--nav icon -->
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </div>
+            </button>
+            <div class="nav-container">
+              <ul class="nav-menu menu">
+                <li class="menu-item"> <a href="index3.html" class="menu-link"><i class="fa fa-cutlery fa-1x"></i> Feeding</a> </li>
+                <li class="menu-item"> <a href="index5.html" class="menu-link"><i class="fa fa-camera-retro fa-1x"></i> Memory</a> </li>
+                <li class="menu-item"> <a href="index7.html" class="menu-link"><i class="fa fa-clock-o fa-1x" ></i> WorkOut</a> </li>
+               <!-- sign out button -->
+            <input type="submit" id="signout" class="btn btn-primary" value="Sign Out" onclick="handleSignOut();">
+            </ul>
+           </div>
+          </nav>
+    <!--nav end  -->
+            <br>
+            <div class="picks"><h4>feed your monster</h4></div>
+            <div id="clock">
+                <p class="unit" id="hours" style="text-align: center;"></p>
+                <!-- <span class="unit" id="minutes"></span>
+                <span class="unit" id="seconds"></span>
+                <span class="unit" id="ampm"></span> -->
+            </div>
+            <br>
+                    <div class="inner">
+                       <div id="play">
+                    <div id="drop">
+<!-- 12/5禮拜二新增 -->  <!-- show monster -->
+                        <div id="momo">
+                        </div>
+<!-- 12/5禮拜二新增 -->
+                        <br>
+                        <br>
+                        
+                        <!-- <div id="test1"></div>
+                        <div id="test"></div>
+                        <div id="test3"></div> -->
+
+                         
+                        <div class="w3-light-grey">
+                            <div class="w3-container w3-center" style="width:0%">0%</div>
+                        </div>
+                    </div>
+                    <div class="dragall">
+                        <div id="drag1" class="drag">A</div>
+                        <div id="drag2" class="drag">B</div>
+                        <div id="drag3" class="drag">C</div>
+                        <div id="drag4" class="drag">D</div>
+                        <div id="drag5" class="drag">E</div>
+                    </div>
+                </div>
+                 
+            </div>
+              
+       
+    </div>
+<!-- 12/5禮拜二新增  time count down & get prev page info-->    
+    <script>
+        // document.getElementById("test").innerHTML = localStorage.getItem("medval");
+        // document.getElementById("test1").innerHTML = localStorage.getItem("mydate");
+        // document.getElementById("test3").innerHTML = localStorage.getItem("mydate");
+            console.log(localStorage.getItem("medval"));
+            console.log(localStorage.getItem("mydate"));
+            console.log(localStorage.getItem("myMonster"));
+
+
+        
+
+
+
+
+        
+            // document.getElementById("demo").innerHTML = curSec;
+            var 
+                $hOut = $('#hours'),
+                $mOut = $('#minutes'),
+                $sOut = $('#seconds'),
+                $ampmOut = $('#ampm');
+
+
+        function update(){
+            var time = localStorage.getItem("mydate");
+            // console.log(time);
+            // console.log(time[16],time[17],time[18],time[19],time[20]);
+            var timmm = new Date().getTime;
+            // Get time value 
+            var hour = time[16]+time[17];
+            var min = time[19]+time[20];
+            var sec = time[22]+time[23];
+
+            var hourInt = parseInt(hour);
+            var minInt = parseInt(min);
+            var secInt = parseInt(sec);
+                // console.log(hour+':'+min);
+                // console.log(hourInt,minInt,hourInt+minInt);
+            var selectTime = hourInt*60*60+minInt*60+secInt;
+
+            var curTime = new Date();    
+            var curHour = curTime.getHours();
+            var curMin = curTime.getMinutes();
+            var curSec = curTime.getSeconds();
+                // console.log(curHour,curMin,curSec);
+            var curHourInt =parseInt(curHour);
+            var curMinInt =parseInt(curMin);
+            var curSecInt =parseInt(curSec);
+                // console.log(curHourInt,curMinInt,curSecInt);
+
+            var nowTime = curHourInt*60*60+curMinInt*60+curSecInt;
+
+            console.log(selectTime,nowTime);
+
+            var timeOnOn = selectTime - nowTime;
+                            // ?selectTime -nowTime
+                            // :nowTime - selectTime;
+
+            console.log(timeOnOn);
+            if (timeOnOn < 0){
+                timeOnOn = (24*60*60)+timeOnOn;
+            }
+
+    
+            var hours = Math.floor(timeOnOn/3600);
+
+            var minut = Math.floor(timeOnOn/60) < 60
+                        ? Math.floor(timeOnOn/60)
+                        : Math.floor(timeOnOn/60)%60;
+                         
+            var secon = timeOnOn%60;
+           
+
+            hours = checkTime(hours);
+            minut = checkTime(minut);
+            secon = checkTime(secon);
+
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+            // var hours = hourInt > curHourInt
+            //             ? hourInt -1 - curHourInt
+            //             : hourInt < curHourInt
+            //                 ? hourInt + 24 - curHourInt
+            //                 : hourInt - curHourInt;
+            
+            // var minut = minInt > curMinInt
+            //             ? minInt - 1 - curMinInt
+            //             : minInt < curMinInt
+            //                 ? minInt + 60 - curMinInt
+            //                 : minInt-curMinInt;
+            
+            // var secon = secInt > curSecInt
+            //             ? secInt - 1 - curSecInt
+            //             : secInt < curSecInt
+            //                 ? secInt + 60 - curSecInt
+            //                 : secInt - curSecInt;
+                            
+                  
+            var timeOn = hours+minut+secon;
+            console.log(hours+':'+minut+':'+secon );
+            // console.log(minut);
+            // console.log(secon);
+
+            
+            
+            // console.log(timeOn);
+        
+            $hOut.text(hours+' : '+minut+' : '+secon);
+            $mOut.text(minut);
+            $sOut.text(secon);
+            // $ampmOut.text(ampm);
+
+
+
+                      
+
+            console.log(timeOn);
+            if( timeOnOn==0 ){
+                alert("yeah!");
+                $('#drop').css("background-color","red");
+
+
+
+
+             }
+             return;
+        }
+        update();
+        window.setInterval(update, 1000);
+
+        
+    </script>
+ <!-- firebase -->
+ <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyCi-7nuFqKhdtPJIsc_NaoAuQUW9LMd5V0",
+     authDomain: "class-27705.firebaseapp.com",
+     databaseURL: "https://class-27705.firebaseio.com",
+     projectId: "class-27705",
+     storageBucket: "class-27705.appspot.com",
+     messagingSenderId: "839264844115"
+   };
+   firebase.initializeApp(config);
+ </script>
+     <!-- nav -->
+ <script src="js/nav.js"></script>
+ <script src="myauth.js"></script>
+        
+</body>
+    
+</html>

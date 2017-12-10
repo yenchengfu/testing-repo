@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Monster</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110738954-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110738954-1');
+</script>
+
+    <meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,maximum-scale=1" />
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> <!--nav -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> <!--nav -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+    
+    <link rel="stylesheet" type="text/css" href="aimee/css/style.css">  <!-- aimee css -->
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <!-- page1 -->
+         <!-- nav-> monster page-->
+    <div data-role="page" id="article5">
+        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+            <h1>Monster</h1>
+            <a class="ui-btn ui-btn-icon-left ui-icon-bars" href="#left-menu" style="padding:18px; background:none;"></a>
+        </div>
+        <div id="left-menu" data-role="panel" data-position="left" data-theme="b">
+            <a class="ui-btn" data-theme="b" href="#article5">Monster</a>
+            <a class="ui-btn" data-theme="b">History</a>
+            <a class="ui-btn" data-theme="b">Setting</a>
+            <input type="submit" id="signout" class="btn btn-primary" value="Sign Out" onclick="handleSignOut();">
+        </div>
+    <div data-role="content">
+        <div class="container">
+            <ul class="gallery gallery-active">
+                <li><a href="img/monster-level1.jpg" rel="external"><img src="img/monster-level1.jpg" alt="Level 01" /></a></li>
+                <li><a href="img/monster-level3.jpg" rel="external"><img src="img/monster-level3.jpg" alt="Level 03" /></a></li>
+                <li><a href="img/monster-level5.jpg" rel="external"><img src="img/monster-level1.jpg" alt="Level 01" /></a></li>
+                <li><a href="img/monster-level7.jpg" rel="external"><img src="img/monster-level3.jpg" alt="Level 03" /></a></li>
+                <li><a href="img/monster-level9.jpg" rel="external"><img src="img/monster-level1.jpg" alt="Level 01" /></a></li>
+                <li><a href="img/monster-level11.jpg" rel="external"><img src="img/monster-level3.jpg" alt="Level 03" /></a></li>
+             
+            </ul>
+            <hr style="background: #bebebe; margin: 16px 0;">
+			<div style="text-align: center;">
+				<a href="index3.html" data-corners="false" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev Page</a>
+				
+			</div>
+ 
+        </div>
+     </div>
+</div>
+
+
+</body>
+
+</html>

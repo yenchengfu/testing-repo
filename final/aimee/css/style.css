@@ -1,0 +1,31 @@
+/* Gallery styles */
+.gallery {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.gallery:after {
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.gallery li {
+	float: left;
+	width: 50%;
+}
+/* .gallery li a {
+	border: 1px solid #3c3c3c;
+	display: block;
+	margin: 5px;
+} */
+.gallery li img {
+	display: block;
+    height: auto;
+    margin: 8px;
+	width: 90%;
+}
+/* Gallery styles END */
+
+

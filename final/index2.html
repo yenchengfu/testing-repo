@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Monster</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110738954-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110738954-1');
+</script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+ <!-- page1 -->
+        <div class="item item-0" id="page1">
+            <div class="content">
+                <div class="m_animate_box">
+                    <div class="inner">
+                        <div class="inn_box">
+                            <h1 class="welcome2"><img src="img/logo.png" border="0" class="eye2">MONPLE<h1 class="welcome">medicine reminder</h1>
+                            </h1> 
+                                       <div class="form">
+                                          <div class="container">
+                                            <label><b>Email</b></label>
+                                            <input type="text" id="form-email" class="form-contro" placeholder="Enter Email" name="uname" required>
+
+                                            <label><b>Password</b></label>
+                                            <input type="password" id="form-password" class="form-contro" placeholder="Enter Password" name="psw" required>
+                                            
+                                            <input type="submit" id="signin" class="signin" value="LOGIN" onclick="handleSignIn();"><br>
+                                            <input type="checkbox" checked="checked"> Remember me
+                                          </div>
+
+                                          <div class="container">
+                                            <input type="submit" id="signup" class="signup" value="Sign Up" onclick="handleSignUp();">
+                                            <span class="psw"><i class="fa fa-facebook-official" aria-hidden="true"></i><input type="submit" id="fblogin" class="fblogin" value="  Facebook LogIn" onclick="handleFBLogin();"></span>
+                                          </div>
+                                        </div>
+                            
+                            <!-- space -->
+                                <div class="brand_list"></div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        <!-- wrap end     -->
+    </div>
+    <!-- login -->
+    <!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCi-7nuFqKhdtPJIsc_NaoAuQUW9LMd5V0",
+    authDomain: "class-27705.firebaseapp.com",
+    databaseURL: "https://class-27705.firebaseio.com",
+    projectId: "class-27705",
+    storageBucket: "class-27705.appspot.com",
+    messagingSenderId: "839264844115"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="myauth.js"></script>
+
+</body>
+
+</html>
